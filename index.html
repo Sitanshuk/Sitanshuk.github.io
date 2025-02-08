@@ -75,16 +75,16 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container">
+            <div class="container mobile-view">
                 <div class="masthead-heading">     
-                        Sitanshu Kushwaha   
+                    Sitanshu Kushwaha   
                 </div>
                 <div class="masthead-subheading">
-                Data | ML | Software <br> 
-                <div class="masthead-subheading">Engineer</div>
+                    Data | ML | Software <br> 
+                    <div class="masthead-subheading">Engineer</div>
 
                 </div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mobile-hide" href="#services">Tell Me More</a>
             </div>
         </header>
         <!-- Services-->
@@ -127,6 +127,60 @@
                     <h3 class="section-subheading text-muted">Sneak peek into some of my Projects.</h3>
                 </div>
                 <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#talk2docModal"
+                                ><div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <div class="img-fluid" style="width: 400px; height: 150px;">
+                                    <p class="portfolio-text">
+                                        Centralized platform for students to manage notes and job applications using AI-powered search.
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Talk2Doc</div>
+                                <div class="portfolio-caption-subheading text-muted">RAG, LLM, API's, GCP</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#dinesynModal"
+                                ><div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <div class="img-fluid" style="width: 400px; height: 150px;">
+                                    <p class="portfolio-text">
+                                        Real-time restaurant availability and discovery in NYC using big data technologies. 
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">DineSync</div>
+                                <div class="portfolio-caption-subheading text-muted">Spark, Kafka, MongoDB, Django</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#9to5Modal"
+                                ><div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <div class="img-fluid" style="width: 400px; height: 150px;">
+                                    <p class="portfolio-text">
+                                        Analyzing work-life balance and commuting impacts on job attrition using Bayesian statistical modeling. 
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Beyond the 9 to 5</div>
+                                <div class="portfolio-caption-subheading text-muted">PyMC, NumPy, ArviZ</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"
@@ -470,6 +524,170 @@
                 </div>
             </div>
         </footer>
+        <!-- Portfolio Modals--><!-- Talk2Doc Modal-->
+        <div class="portfolio-modal modal fade" id="talk2docModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal"><img src='assets/img/close-icon.svg' /></div>
+            <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-12">
+            <div class="modal-body">
+            <h2 class="text-uppercase">Talk2Doc</h2>
+            <p class="item-intro text-muted">AI-Powered Productivity Tool</p>
+            <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/talk2doc-overview.png' alt="Talk2Doc Overview" style="max-width: 40%;" />
+            
+            <h3 style="text-align: left;">🚀 Introduction</h3>
+            <p style="text-align: left;">Managing job applications is tedious, and manually tracking application statuses often leads to missed deadlines and inefficiencies. Additionally, students often struggle with finding information scattered across notes, PDFs, and saved resources.</p>
+            <p style="text-align: left;"><strong>👉 Talk2Doc</strong> is an AI-powered productivity tool that:
+            <ul style="text-align: left;">
+            <li>Automatically tracks job applications via Gmail API & syncs data to Notion.</li>
+            <li>Uses an AI-powered Notion search assistant to let students query their stored notes and files.</li>
+            </ul>
+            </p>
+            <h3 style="text-align: left;">📌 Key Features</h3>
+            <h4 style="text-align: left;">1️⃣ Smart Job Application Tracker</h4>
+            <ul style="text-align: left;">
+            <li>🔹 <strong>Automated Email Parsing</strong></li>
+            <ul style="text-align: left;">
+                <li>Uses Gmail API to fetch and categorize job-related emails.</li>
+                <li>Extracts Company Name, Application Status, Due Dates, and Follow-ups.</li>
+                <li>If time-sensitive, sends notifications before deadlines.</li>
+            </ul>
+            <li>🔹 <strong>Notion Kanban Board Integration</strong></li>
+            <ul style="text-align: left;">
+                <li>Updates Kanban Board dynamically.</li>
+                <li>If an application already exists, updates status.</li>
+                <li>If new, creates a new tracking card.</li>
+            </ul>
+            </ul>
+            <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/Talk2Doc-kanban-board.png' alt="Talk2Doc Notion Kanban Integration" />
+            
+            <h4 style="text-align: left;">2️⃣ LLM-Powered Notion Search Assistant</h4>
+            <ul style="text-align: left;">
+            <li>🔹 <strong>AI-Powered Data Retrieval</strong></li>
+            <ul style="text-align: left;">
+                <li>Searches through PDFs and Text Notes stored in Notion.</li>
+                <li>Uses LLM (Large Language Models) to answer user queries only based on their stored notes.</li>
+            </ul>
+            <li>🔹 <strong>Example Use Cases:</strong></li>
+            <ul style="text-align: left;">
+                <li>“What was my last interview feedback at Amazon?”</li>
+                <li>“Summarize my notes on Spark performance tuning.”</li>
+                <li>“Find all research papers I saved about LLM architectures.”</li>
+            </ul>
+            </ul>
+            <!-- <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/talk2doc-ai-search.png' alt="Talk2Doc AI Search Demo" /> -->
+            
+            <h3 style="text-align: left;">🛠️ Tech Stack & Architecture</h3>
+            <ul style="text-align: left;">
+                <li>🔹 Gmail API – Email processing</li>
+                <li>🔹 Notion API – Data storage & retrieval</li>
+                <li>🔹 Google Cloud Platform (GCP): Cloud Functions, Pub/Sub, Vertex AI, Firestore, Cloud Storage</li>
+                <li>🔹 Django – Backend & Frontend UI</li>
+            </ul>
+            <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/Talk2Doc-architecture-diagram.png' alt="Talk2Doc Architecture Diagram" />
+
+            <h3 style="text-align: left;">🔗 Try It Out</h3>
+            <p style="text-align: left;"><i class="fab fa-github"></i><a href="https://github.com/Sitanshuk/Talk2Doc" target="_blank"> GitHub Repository</a></p>
+            <p style="text-align: left;"><i class="fab fa-youtube"></i><a href="https://www.youtube.com/watch?v=80KXbWvUfC4" target="_blank"> Watch Demo Video</a></p>
+            
+            <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <!-- Portfolio Modals--><!-- DineSyncModal -->
+        <div class="portfolio-modal modal fade" id="dinesyncModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src='assets/img/close-icon.svg' /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Bsegnite</h2>
+                                    <p class="item-intro text-muted">Why would you skim thorugh 1000s of documents? when you can filter out what you need.</p>
+                                    <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/01-full.png' alt="" />
+                                    <div style="text-align: left;">
+                                        <p>Implemented a real-time corporate announcement parser for BSE using Scrapy, applying NLP and ML for dynamic subcategorization. Developed a user-friendly Django website for easy access and filtering.</p>
+                                        <p>Key Technologies:
+                                            <ul>
+                                                <li>Web Scraping (Scrapy)</li>
+                                                <li>Natural Language Processing (NLP)</li>
+                                                <li>Machine Learning (ML)</li>
+                                                <li>Web Development (Django)</li>
+                                                <li>Database (PostgreSQL)</li>
+                                            </ul>
+                                        </p>
+                                        <p>Advantages over Traditional BSE interfaces:
+                                            <ul>
+                                                <li>View announcements for multiple days.</li>
+                                                <li>50 additional subcategories for efficient filtering.</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li>Date: June 2019</li>
+                                        <li>Client: Innolearn solutions pvt ltd.</li>
+                                        <li>Category: Python Development</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modals--><!-- 9 to 5 Modal -->
+        <div class="portfolio-modal modal fade" id="925Modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src='assets/img/close-icon.svg' /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Bsegnite</h2>
+                                    <p class="item-intro text-muted">Why would you skim thorugh 1000s of documents? when you can filter out what you need.</p>
+                                    <img class="img-fluid d-block mx-auto" src='assets/img/portfolio/01-full.png' alt="" />
+                                    <div style="text-align: left;">
+                                        <p>Implemented a real-time corporate announcement parser for BSE using Scrapy, applying NLP and ML for dynamic subcategorization. Developed a user-friendly Django website for easy access and filtering.</p>
+                                        <p>Key Technologies:
+                                            <ul>
+                                                <li>Web Scraping (Scrapy)</li>
+                                                <li>Natural Language Processing (NLP)</li>
+                                                <li>Machine Learning (ML)</li>
+                                                <li>Web Development (Django)</li>
+                                                <li>Database (PostgreSQL)</li>
+                                            </ul>
+                                        </p>
+                                        <p>Advantages over Traditional BSE interfaces:
+                                            <ul>
+                                                <li>View announcements for multiple days.</li>
+                                                <li>50 additional subcategories for efficient filtering.</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li>Date: June 2019</li>
+                                        <li>Client: Innolearn solutions pvt ltd.</li>
+                                        <li>Category: Python Development</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Portfolio Modals--><!-- Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">

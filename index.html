@@ -17,34 +17,50 @@
         <link href='css/styles.css' rel="stylesheet"/>
 <style type="text/css">
 /* Style for the icon container */
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Style for the icon container */
 .resume {
   position: fixed;
-  bottom: 1vw; /* Adjust the distance from the bottom as needed */
-  right: 1vw; /* Adjust the distance from the right as needed */
+  bottom: 1vw;
+  right: 1vw;
   z-index: 999;
 }
 
 /* Style for the icon */
 .resume_i {
-  width: 5vw; /* Icon width set to 5% of the viewport width */
-  height: 5vw; /* Icon height set to 5% of the viewport width */
+  width: 5vw;
+  height: 5vw;
   border-radius: 30%;
   background-color: #ffffff;
-  padding: 1vw; /* Adjust the padding as needed */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Circular shadow effect */
+  padding: 1vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s ease-in-out infinite;
+  animation-delay: 5s; /* Runs every 5 seconds */
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .resume {
-    bottom: 10px; /* Adjust the distance from the bottom for mobile devices */
-    right: 10px; /* Adjust the distance from the right for mobile devices */
+    bottom: 10px;
+    right: 10px;
   }
 
-  .resume_i{
-    width: 50px; /* Set a fixed width for the icon on mobile devices */
-    height: 50px; /* Set a fixed height for the icon on mobile devices */
-    padding: 8px; /* Adjust the padding for mobile devices */
+  .resume_i {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
   }
 }
 
@@ -55,7 +71,6 @@
         
             <a href='assets/file/Sitanshu_CV.pdf' target="_blank" class="resume">
                 <img src='assets/img/cv.png' class="resume_i">
-              <!-- <i class="fas fa-file-download" id="resume_i"></i> -->
             </a>
     
         
@@ -65,10 +80,10 @@
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src='assets/img/my_logo/logo.svg'/></a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Summary">Summary</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Recommendations</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,36 +99,37 @@
                     <div class="masthead-subheading">Engineer</div>
 
                 </div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mobile-hide" href="#services">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mobile-hide" href="#summary">Tell Me More</a>
             </div>
         </header>
         <!-- Services-->
-        <section class="page-section" id="services">
+        <section class="page-section" id="summary">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Professional Expertise</h2>
+                    <h2 class="section-heading text-uppercase">Professional Summary</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
                  <div class="row text-center">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i></span>
-                        <h4 class="my-3">Software Engineer</h4>
-                        <p class="text-muted">
-                            Experienced Full-Stack Software Engineer skilled in Django, Python, JavaScript, SQL, RESTful APIs. Strong in agile methodologies and Git version control. Committed to delivering robust solutions and collaborating with cross-functional teams. Passionate about continuous learning and industry trends.              
-                        </p>
+                        <div class="img-fluid">
+                            <img src="assets/img/profile.jpeg" alt="Professional Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-file-invoice fa-stack-1x fa-inverse"></i></span>
-                        <h4 class="my-3">Data Engineer</h4>
+                    <div class="col-md-8 text-left">
                         <p class="text-muted">
-                            Experienced Data Engineer adept in designing scalable data pipelines, ETL, data warehousing, and Python, SQL, Apache Spark, cloud platforms. Proven track record of optimizing workflows, ensuring data quality, and driving data-driven business decisions
+                            🚀 Hi, I'm Sitanshu, a Data & AI Engineer passionate about building scalable, intelligent systems that transform data into actionable insights. With a background in Software Engineering, Machine Learning, and Big Data, I thrive on designing solutions that enhance efficiency, automation, and decision-making.
                         </p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-chart-line fa-stack-1x fa-inverse"></i></span>
-                        <h4 class="my-3">Machine Learning Engineer</h4>
                         <p class="text-muted">
-                            Experienced ML Engineer delivering accurate solutions to complex business challenges. Proficient in Computer Vision, NLP, Recommender Systems, and data analysis. Skilled in advanced ML algorithms for precise predictions and valuable insights. Passionate about leveraging ML to drive business success.
+                            💡 Over the past 3+ years, I have built enterprise-scale data platforms, real-time AI applications, and cloud-based infrastructures at NBCUniversal, Johnson & Johnson, LTIMindtree, and NYU IT. My contributions have automated workflows, reduced costs by 25%, and improved data accessibility across multiple teams.
+                        </p>
+                        <p class="text-muted">
+                            🔹 <strong>Core Expertise:</strong> Big Data (Spark, Kafka, Databricks, Snowflake), Cloud Computing (AWS, GCP), AI & LLMs (Retrieval-Augmented Generation (RAG), Generative AI, NLP, Transformer Models), and Full-Stack Development (Python, Django, REST APIs, SQL).
+                        </p>
+                        <p class="text-muted">
+                            🔍 I’m excited to leverage my expertise to drive data-driven innovation, scalable AI solutions, and high-performance applications. Open to opportunities where I can contribute technical excellence and problem-solving leadership.
+                        </p>
+                        <p class="text-muted">
+                            📩 Let’s connect! <a href="https://www.linkedin.com/in/sitanshukushwaha/" target="_blank">LinkedIn</a> | <a href="assets/file/Sitanshu_CV.pdf" target="_blank">Resume</a>
                         </p>
                     </div>
                 </div>
@@ -147,7 +163,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#dinesynModal"
+                            <a class="portfolio-link" data-toggle="modal" href="#dinesyncModal"
                                 ><div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -296,8 +312,8 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Who is Sitanshu?</h3>
+                    <h2 class="section-heading text-uppercase">About Me</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
                 <ul class="timeline">
                     <li>
@@ -320,10 +336,20 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src='assets/img/about/2.png' alt="" /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src='assets/img/about/nbcu-logo.png' alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h3>Experience:</h3>
+                            </div>
+                            <div>
+                                <div class="portfolio-caption-subheading text-muted">Intern: Data Engineer</div>
+                                <div class="timeline-body"><p class="text-muted"></p>June 2024 - Present</div>
+                                <h4 class="">NBCUniversal</h4>   
+                            </div>
+                            <div>
+                                <div class="portfolio-caption-subheading text-muted">Intern: Software Engineer</div>
+                                <div class="timeline-body"><p class="text-muted"></p>Oct 2023 - Present</div>
+                                <h4 class="">NYU IT</h4>   
                             </div>
                             <div>
                                 <div class="portfolio-caption-subheading text-muted">Data Engineer</div>
@@ -331,7 +357,7 @@
                                 <h4 class="">LTIMindtree</h4>   
                             </div>
                             <div>
-                                <div class="portfolio-caption-subheading text-muted">Freelancer: Machine Learning</div>
+                                <div class="portfolio-caption-subheading text-muted">Machine Learning Engineer</div>
                                 <div class="timeline-body"><p class="text-muted"></p>Mar 2020 - Dec 2020</div>
                                 <h4 class="">Oniria Creation</h4>   
                             </div>
@@ -341,7 +367,7 @@
                                 <h4 class="subheading">Toflo fintech consulting</h4>
                             </div>
                             <div>
-                                <div class="portfolio-caption-subheading text-muted">Freelancer: Full Stack Python Developer</div>
+                                <div class="portfolio-caption-subheading text-muted">Intern: Full Stack Python Developer</div>
                                 <div class="timeline-body"><p class="text-muted"></p>June 2019 -  Mar 2020</div>
                                 <h4 class="subheading">Busfor.pl</h4>
                             </div>
@@ -360,35 +386,34 @@
                             </div>
                             <div>
                                 <div class="timeline-body"><p class="text-muted">Programming Languages:</p></div>
-                                <h5 class="subheading">Python, R, C, Java</h5>
+                                <h5 class="subheading">Python, SQL</h5>
                             </div>
                             <div>
-                                <div class="timeline-body"><p class="text-muted">Big Data:</p></div>
-                                <h5 class="subheading">Spark, Databricks, Azure Data Factory, Data Lakes, ETL</h5>
+                                <div class="timeline-body"><p class="text-muted">Big Data & Cloud Technologies:</p></div>
+                                <h5 class="subheading">Spark, Databricks, Snowflake, Kafka, BigQuery, AWS, GCP, Azure</h5>
+                            </div>
+                            <div>
+                                <div class="timeline-body"><p class="text-muted">AI & Machine Learninng:</p></div>
+                                <h5 class="subheading">LLMs (RAG, Transformers), TensorFlow,  PyTorch, Keras, Scikit-learn</h5>
                             </div>
                             <div>
                                 <div class="timeline-body"><p class="text-muted">Databases:</p></div>
-                                <h5 class="subheading">MySQL, PostgreSQL, Oracle Database, MongoDB, Cassandra</h5>
+                                <h5 class="subheading">MySQL, PostgreSQL, Oracle, MongoDB, Cassandra.</h5>
                             </div>
                             <div>
-                                <div class="timeline-body"><p class="text-muted">Machine Learninng:</p></div>
-                                <h5 class="subheading">Numpy, Pandas, Scikit-learn, Opencv, nltk, Tensorflow, Keras</h5>
-                            </div>
+                                <div class="timeline-body"><p class="text-muted">Software Development & Web Frameworks:</p></div>
+                                <h5 class="subheading">Django, Flask, REST APIs, GraphQL, HTML, CSS, JS</h5>
                             <div>
                                 <div class="timeline-body"><p class="text-muted">Visualization:</p></div>
-                                <h5 class="subheading">Tableau, Matplotlib, Seaborn</h5>
+                                <h5 class="subheading">Tableau, Matplotlib, Seaborn, Plotly</h5>
                             </div>
                             <div>
-                                <div class="timeline-body"><p class="text-muted">Web Devlopment:</p></div>
-                                <h5 class="subheading">Django, Flask, HTML, CSS, JS, PHP</h5>
+                                <div class="timeline-body"><p class="text-muted">DevOps & CI/CD:</p></div>
+                                <h5 class="subheading">Git, Docker, Kubernetes, Terraform, Jenkins, MLOps</h5>
                             </div>
                             <div>
                                 <div class="timeline-body"><p class="text-muted">Web Scraping:</p></div>
                                 <h5 class="subheading">Scrapy, Selenium, Beautifulsoup</h5>
-                            </div>
-                            <div>
-                                <div class="timeline-body"><p class="text-muted">miscellaneous:</p></div>
-                                <h5 class="subheading">Git, Cloud deployment, Trello</h5>
                             </div>
                             
                         </div>
@@ -421,14 +446,14 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Testimonials</h2>
+                    <h2 class="section-heading text-uppercase">Recommendations</h2>
                     <h3 class="section-subheading text-muted">What did people have to say after working with me for at least 3 months?</h3>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <div class="testimonial">
+                            <div class="Recommendations">
                                 As a Business Analyst, I had the privilege of working alongside Sitanshu as a data engineer on our team. Throughout my time working with him, I was thoroughly impressed by his exceptional command over PySpark and deep understanding of data engineering best practices. Sitanshu consistently demonstrated exceptional problem-solving skills and was always able to find creative and effective solutions to challenging data engineering problems. I highly recommend Sitanshu to any organization seeking a talented and motivated data engineer.
                             </div>
                             <h4>Damian McBride</h4>
@@ -440,7 +465,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <div class="testimonial">
+                            <div class="Recommendations">
                                 On top of delivering good performance from the coding perspective, I would like to underline two traits of Sitanshu that demonstrate his potential for high growth further:
                                 <li>the high degree of independence and initiative in researching ways for solving a given problem with technology,</li>
                                 <li>good communication skills, the ability to translate technical intricacies to the level understandable for non-technical team members.</li>
@@ -454,7 +479,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <div class="testimonial">
+                            <div class="Recommendations">
                                 Sitanshu Kushwaha proved to be a great person to work with. He is very thorough in everything he does and can be depended upon to get the job done. Loyal, insightful and independent. He showed a high level of confidence and most importantly a good team player. He was a valuable contributor to our projects. Ambitious and independent.
                             </div>
                             <h4>Armash Fankar</h4>
@@ -478,7 +503,9 @@
         <section class="py-5 clients">
             <div class="container">
                 <div class="row">
-                    
+                    <div class="col-md-1 col-sm-6 my-3">
+                        <a href="#!"><img class="logo d-block mx-auto" src='assets/img/logos/nbcu-logo.png' alt="" /></a>
+                    </div>
                     <div class="col-md-1 col-sm-6 my-3">
                         <a href="#!"><img class="logo d-block mx-auto" src='assets/img/logos/ltimindtree-logo.png' alt="" /></a>
                     </div>
@@ -494,9 +521,6 @@
                     <div class="col-md-1 col-sm-6 my-3">
                         <a href="#!"><img class="logo d-block mx-auto" src='assets/img/logos/Green-arc-logo.svg' alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-3">
-                        <a href="#!"><img class="logo d-block mx-auto" src='assets/img/logos/oniria-pets-logo.png' alt="" /></a>
-                    </div>
                     <div class="col-md-1 col-sm-6 my-3">
                         <a href="#!"><img class="logo d-block mx-auto" src='assets/img/logos/BlaBlaCar-logo.png' alt="" /></a>
                     </div>
@@ -511,14 +535,14 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © sitanshu.tech 2023</div>
+                    <div class="col-lg-4 text-lg-left">Copyright © sitanshu.tech 2025</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="https://github.com/Sitanshuk/" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="mailto: sitanshu.kushwaha20@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto: sak9813@nyu.edu target="_blank"><i class="far fa-envelope"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/sitanshukushwaha/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right">
-                        sitanshu.kushwaha20@gmail.com
+                        sak9813@nyu.edu
                     </div>
                     <!-- <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div> -->
                 </div>
@@ -645,7 +669,7 @@
             </div>
         </div>
         <!-- Portfolio Modals--><!-- 9 to 5 Modal -->
-        <div class="portfolio-modal modal fade" id="925Modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="9to5Modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-dismiss="modal"><img src='assets/img/close-icon.svg' /></div>
